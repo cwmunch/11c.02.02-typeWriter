@@ -8,16 +8,18 @@ let n = 0;
 //run clearHTML
 function clearHTML() {
   console.log("clearHTML");
-  document.querySelector("#typewriter").textContent = "";
+  document.querySelector(".typewritten").textContent = "";
 
   loop();
 }
 
-//run loop
+//run loop and end it
 function loop() {
   console.log("loop");
 
-
-  if() {
-    setTimeout(loop, 500);
+  if (n < getText.length) {
+    document.querySelector(".typewritten").textContent += getText.charAt(n);
+    n++;
+    setTimeout(loop, 150);
+  }
 }
